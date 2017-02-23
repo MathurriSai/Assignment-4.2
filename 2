@@ -1,0 +1,41 @@
+public static void main(Sring[] args)throws parse exception
+{
+if(args.lengthh>2)// we get two input frrom theuser under the condition that it's length should not be under 2.
+{                                                           
+system.out.println("Pass two arguments");
+System.exit(1);
+}
+try
+{
+Path p=new Path("/");  //instead of making the user to create the path we create the path 
+Configuration conf=new Configuaration();
+FileSystem fi=FileSystem.get(p.toUri(),conf);
+RemoteIterator<LocatedFileStatus>it=fi.ListFiles(p,true);
+While(rit.hasNext())
+{
+LocatedFileStatus s=rit.next();
+long lon=s.getModificationTime();
+SimpleDateFormat sdl=new SimpleDateFormat("YYYYMMddHHmmss"); // will compare the format with this format given 
+Date D1=sdl.parse(args[0]);
+Date D2=sdl.parse(args[1]);
+Date dt=new Date(lon);
+
+SimpleDateFormat sdf=new SimpleDateFormat("YYYY-MM-dd HH mm ss"); // will change the date to string fomat
+String d1=sdf.format(D1);
+String d2=sdf.format(D2);
+String d3=sdf.format(dt);
+
+TimeStamp=Timestamp.valueof(d3);// will give the necessary details of the specified date.
+TimeStamp=Timestamp.valueof(d1);
+TimeStamp=Timestamp.valueof(d2);
+
+if (st.before(st2)&7st.after(st1)) // if the date format satisfies this condition then it will undergo this loop.
+{
+System.out.println(s.getpath());
+}
+}
+}
+catch(IOException e) // wil throw exception when it finds error
+{
+e.printStackTrace();
+}
